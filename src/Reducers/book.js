@@ -1,14 +1,14 @@
 const books = (state = [
 
 ], { action, book }) => {
-    switch (action) {
-        case 'CREATE_BOOK':
-            return [...state, book]
-        case 'REMOVE_BOOK':
-            return state.filter(yield_book => yield_book.id !== book.id)
-        default:
-            return state
-    }
-}
+  switch (action) {
+    case 'CREATE_BOOK':
+      return [...state, book];
+    case 'REMOVE_BOOK':
+      return state.filter(Yield => Yield.id !== book.id);
+    default:
+      return state;
+  }
+};
 
-export default books
+export default books;
