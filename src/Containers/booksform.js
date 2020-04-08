@@ -49,7 +49,7 @@ function Booksform(props) {
       <div className="row off">
         <input type="text" name="bookauthor" placeholder="Author" />
         <input className="center-hover" type="text" />
-        <input className="t-center center-placeholder" type="text" placeholder="Tap [enter] to add this book" />
+        <input className="t-center center-placeholder" type="text" placeholder="Tap [enter] to SUBMIT" />
         <input type="button" value="Cancel" style={{ textAlign: 'end' }} />
       </div>
     </div>

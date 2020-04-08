@@ -240,7 +240,7 @@ input[name='booktitle']:hover+.center-hover {
 } */
 
 input:focus+.center-hover+.center-placeholder {
-    opacity: 0;
+    opacity: .5;
 }
 
 input:focus+.center-hover {
