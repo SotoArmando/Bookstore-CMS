@@ -1,15 +1,16 @@
 import React from 'react';
+import Nav from './nav';
+import Bookslist from './Bookslist';
 import '../style.css';
-import BooksForm from './booksform';
-import BooksList from '../Containers/booklist';
 
 function App() {
   return (
     <div className="App">
-      <BooksList />
-      <BooksForm />
+      <Nav />
+      <Bookslist />
     </div>
   );
 }
+
 
 export default App;
