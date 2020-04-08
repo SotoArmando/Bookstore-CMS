@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './nav';
-import Bookslist from './Bookslist';
+import Bookslist from '../Containers/bookslist';
 import '../style.css';
 
 function App() {

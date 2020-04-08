@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Msgtitle from '../Containers/msgtitle';
-import Booksform from '../Containers/booksform';
-import Book from './Ennumerated_Components/Book';
+import Msgtitle from '../Components/msgtitle';
+import Booksform from './booksform';
+import Book from '../Components/Ennumerated_Components/Book';
 
 function Bookslist(props) {
   const { bookstore } = props;
@@ -28,8 +28,8 @@ const mapStateToProps = state => ({ bookstore: state.book });
 Bookslist.propTypes = {
   bookstore: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      cat: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
       progress: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
     }),
@@ -39,8 +39,8 @@ Bookslist.propTypes = {
 Bookslist.contextTypes = {
   bookstore: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      cat: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
       progress: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
     }),

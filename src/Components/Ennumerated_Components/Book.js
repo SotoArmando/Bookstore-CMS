@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 
 function Book(props) {
   const { book } = props;
-  const { name, cat, progress, author } = book;
+  const { title, category, progress, author } = book;
 
   return (
     <div className="notshown Book">
       <div className="col">
-        <span className="fw-700">{cat}</span>
-        <span>{name}</span>
+        <span className="fw-700">{category}</span>
+        <span>{title}</span>
         <span>{author}</span>
         <span className="sidemenu">
           <span>Remove</span>
@@ -38,8 +38,8 @@ const mapDispatchToProps = dispatch => ({
 
 Book.propTypes = {
   book: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    cat: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     progress: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,

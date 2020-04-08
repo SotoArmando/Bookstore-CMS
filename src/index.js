@@ -11,9 +11,9 @@ import rootReducer from './Reducers/index';
 const initialState = [
   {
     id: Math.random() + Date().toString(),
-    name: 'Nice Book',
+    title: 'Nice Book',
     desc: 'Nice desc',
-    cat: 'Action',
+    category: 'Action',
     progress: 0,
     author: 'Armando Soto',
   },

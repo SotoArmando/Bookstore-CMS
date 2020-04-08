@@ -13,7 +13,7 @@ function Booksform(props) {
       const form = document.querySelectorAll(inputs);
       if (form[0].checked === true) {
         CREATE_BOOK({
-          desc: 'Random desc', name: form[1].value, cat: form[2].value, author: form[4].value, progress: 0,
+          desc: 'Random desc', title: form[1].value, category: form[2].value, author: form[4].value, progress: 0,
         });
         form[1].value = '';
         form[2].value = 'Action';
