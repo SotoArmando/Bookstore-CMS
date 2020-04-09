@@ -30,8 +30,6 @@ function Book(props) {
 }
 
 const mapDispatchToProps = dispatch => ({
-  // dispatching plain actions
-  // CREATE_BOOK: (book) => dispatch({ type: 'CREATE_BOOK', book }),
   REMOVE_BOOK: index => dispatch({ type: 'REMOVE_BOOK', index }),
   UPDATE_BOOK: book => dispatch({ type: 'UPDATE_BOOK', book }),
 });
