@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Msgtitle from '../Components/msgtitle';
 import Booksform from './booksform';
-import Book from '../Components/Ennumerated_Components/Book';
+import Book from './book';
 
 function Bookslist(props) {
   const { bookstore } = props;
