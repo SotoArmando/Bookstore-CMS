@@ -34,13 +34,13 @@ const mapDispatchToProps = dispatch => ({
   UPDATE_BOOK: book => dispatch({ type: 'UPDATE_BOOK', book }),
 });
 
-Book.propTypes = {
-  book: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    progress: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  }).isRequired,
-};
+// Book.propTypes = {
+//   book: PropTypes.shape({
+//     title: PropTypes.string.isRequired,
+//     category: PropTypes.string.isRequired,
+//     progress: PropTypes.number.isRequired,
+//     author: PropTypes.string.isRequired,
+//   }).isRequired,
+// };
 
 export default connect(mapDispatchToProps)(Book);

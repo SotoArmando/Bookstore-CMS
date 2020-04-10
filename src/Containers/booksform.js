@@ -13,7 +13,7 @@ function Booksform(props) {
       const form = document.querySelectorAll(inputs);
       if (form[0].checked === true) {
         CREATE_BOOK({
-          desc: 'Random desc', title: form[1].value, category: form[2].value, author: form[4].value, progress: 0,
+          desc: 'Random desc', title: form[1].value, category: form[2].value, author: form[4].value, progress: 0, filtered: true
         });
         form[1].value = '';
         form[2].value = 'Action';
@@ -42,8 +42,6 @@ function Booksform(props) {
         <select name="bookcat" className="t-end" placeholder="Select Category">
           {categories.map(cat => <option key={Math.random() * 50 + Date.toString()}>{cat}</option>)}
         </select>
-        {/* document.querySelector("input[type=checkbox]:checked") */}
-
       </div>
       <input type="checkbox" className="off" name="formpart1checkbox" />
       <div className="row off">
@@ -61,7 +59,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 
-Booksform.propTypes = {
-  CREATE_BOOK: PropTypes.func.isRequired,
-};
+// Booksform.propTypes = {
+//   CREATE_BOOK: PropTypes.func.isRequired,
+// };
 export default connect(null, mapDispatchToProps)(Booksform);

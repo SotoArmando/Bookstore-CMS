@@ -283,3 +283,35 @@ input:focus+.center-hover {
     pointer-events: all;
     opacity: 1;
 }
+
+span.Categoriespan {
+    padding: .25em 1em;
+    margin: 0 .25em;
+    min-height: 1em;
+    border-radius: 1em;
+    line-height: 1.075em;
+    cursor: pointer;
+    transition-duration: 355ms;
+    transition-timing-function: cubic-bezier(0.5,1);
+}
+
+span.Categoriespan.active {
+    padding: .25em 1em;
+    margin: 0 .25em;
+    min-height: 1em;
+    background-color: rgba(0, 36, 238, 0.719);
+    border-radius: 1em;
+    line-height: 1.075em;
+    transition-duration: 355ms;
+    transition-timing-function: cubic-bezier(0.5,1);
+}
+
+div.Categoriesform {
+    background-color: white;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
