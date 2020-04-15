@@ -4,7 +4,7 @@ import { book, bookfilter } from './book';
 
 
 const rootReducer = combineReducers({
-  book,bookfilter
+  book, bookfilter,
 });
 
 

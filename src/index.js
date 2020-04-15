@@ -12,11 +12,9 @@ const initialState = [
   {
     id: Math.random() + Date().toString(),
     title: 'Nice Book',
-    desc: 'Nice desc',
     category: 'Action',
     progress: 0,
     author: 'Armando Soto',
-    filtered: true,
   },
 ];
 
