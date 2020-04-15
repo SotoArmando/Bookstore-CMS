@@ -1,21 +1,28 @@
-const initialState = [{
-  id: Math.random() + Date().toString(), name: 'Nice Book', desc: 'Nice desc', cat: 'Action', progress: 0, author: 'Armando Soto',
-}];
 
-const book = (state = initialState, action) => {
-  const { book, type } = action;
+const book = (state = [], action) => {
+  const { book, type, index } = action;
   switch (type) {
     case 'CREATE_BOOK':
       book.id = Math.random() + Date().toString();
-      return [...state, book];
+      return [book, ...state];
     case 'REMOVE_BOOK':
-      return [...state.slice(0, action.index), ...state.slice(action.index + 1)];
+      return [...state.slice(0, index), ...state.slice(index + 1)];
     case 'UPDATE_BOOK':
-      return [...state.slice(0, action.index), book, ...state.slice(action.index + 1)];
+      return [...state.slice(0, index), book, ...state.slice(index + 1)];
+    default:
+      return state;
+  }
+};
+
+const bookfilter = (state = 'Action', action) => {
+  const { category, type } = action;
+  switch (type) {
+    case 'FILTER_BOOK':
+      return category;
     default:
       return state;
   }
 };
 
 
-export default book;
+export { book, bookfilter };

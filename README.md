@@ -11,6 +11,7 @@ An Easy and Cool Calculator it lets ya go deal with numbers as any other calcula
 4. npm install
 5. npm start
 
+Live link => https://muffinbookstore.herokuapp.com
 
 ## Built With
 
