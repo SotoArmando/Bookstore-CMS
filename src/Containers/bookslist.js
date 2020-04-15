@@ -34,7 +34,7 @@ function Bookslist(props) {
         id, category, title, progress, author,
       }, index) => (
         <div key={id + id}>
-          {(category === filtered)
+          {(category === filtered || filtered === 'All')
             ? (
               <Book
                 key={id}
