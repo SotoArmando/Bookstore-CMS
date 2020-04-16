@@ -57,6 +57,7 @@ class Book extends Component {
 
   render() {
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    const percent = [0,25,50,75,100];
     const {
       category, title, author, progress, editmode,
     } = this.state;
@@ -72,12 +73,30 @@ class Book extends Component {
             <span role="button" tabIndex={0} onClick={this.handleEditmode}>Edit</span>
           </span>
         </div>
-        <div className="col">
-          <span className="fw-600">PROGRESS</span>
-          <span>
-            {progress}
+
+
+
+        <div className="row">
+          <div className="row relative">
+            <span className="absolute rotate-less90deg" >
+              <svg height="60" width="60">
+                <circle  cx="30" cy="30" r="20" stroke-width="4px" fill="none" stroke="rgba(0,0,0,.15)" />
+              </svg>
+            </span>
+
+            <span class="progress progress--thin">
+              <svg height="60" width="60">
+                <circle className={"animation-dash-"+Math.max(...[0,25,50,75,100].filter(x => x <= progress))} cx="30" cy="30" r="20" stroke-width="4px" fill="none" />
+              </svg>
+            </span>
+
+          </div>
+
+          <span className="fw-600">PROGRESS<br />{progress}
             {' '}
-            %
+            %</span>
+          <span>
+
           </span>
         </div>
         <div className={`Editor ${(editmode) ? 'on' : ''}`}>

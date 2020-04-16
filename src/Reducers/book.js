@@ -14,7 +14,7 @@ const book = (state = [], action) => {
   }
 };
 
-const bookfilter = (state = 'Action', action) => {
+const bookfilter = (state = 'All', action) => {
   const { category, type } = action;
   switch (type) {
     case 'CHANGE_FILTER':

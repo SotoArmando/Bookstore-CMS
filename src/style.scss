@@ -1,0 +1,63 @@
+$offset: 130;
+$stroke: black;
+
+.progress {
+  transform: rotate(-90deg);  
+  stroke: $stroke;
+
+}
+
+.progress circle:last-child {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  
+  animation-fill-mode: forwards;
+}
+
+.animation-dash-25 {
+    animation: dash-25 1.5s; 
+}
+.animation-dash-50 {
+    animation: dash-50 1.5s; 
+}
+.animation-dash-75 {
+    animation: dash-75 1.5s; 
+}
+.animation-dash-100 {
+    animation: dash-100 1.5s; 
+    stroke: rgb(64, 255, 64);
+}
+
+
+.rotate-less90deg {
+    transform: rotate(-90deg);
+}
+ 
+@keyframes dash-100 {
+    100% {
+        stroke-dashoffset: 0;
+    }  
+}
+
+@keyframes dash-75 {
+    100% {
+        stroke-dashoffset: 35;
+    }  
+}
+
+@keyframes dash-50 {
+    100% {
+        stroke-dashoffset: 67;
+    }  
+}
+
+@keyframes dash-25 {
+    100% {
+        stroke-dashoffset: 98;
+    }  
+}
+
+
+  
+
+// Below stuff for position only

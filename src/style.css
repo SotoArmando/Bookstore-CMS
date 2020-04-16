@@ -221,6 +221,11 @@ div.Book > div:nth-child(2) {
 
 
 /* font-weigth */
+.fw-600 {
+    font-weight: 600;
+    align-self: center;
+}
+
 .fw-400 {
     font-weight: 800;
 }
@@ -380,6 +385,12 @@ span > input {
     color: rgba(0,0,0,.34);
 }
 
-.fw-600 {
-    font-weight: 600;
+
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
 }
