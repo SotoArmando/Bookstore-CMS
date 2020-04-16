@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 
 function Categoriesform(props) {
-  const { FILTER_BOOK } = props;
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const { CHANGE_FILTER } = props;
+  const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 
   function categoryClick(a) {
     document.querySelectorAll('span.Categoriespan.active').forEach(e => e.classList.remove('active'));
     a.currentTarget.classList.add('active');
-    FILTER_BOOK(a.currentTarget.textContent);
+    CHANGE_FILTER(a.currentTarget.textContent);
   }
 
   return (
@@ -22,12 +22,12 @@ function Categoriesform(props) {
 }
 
 Categoriesform.propTypes = {
-  FILTER_BOOK: PropTypes.func.isRequired,
+  CHANGE_FILTER: PropTypes.func.isRequired,
 };
 
 
 const mapDispatchToProps = dispatch => ({
-  FILTER_BOOK: category => dispatch({ type: 'FILTER_BOOK', category }),
+  CHANGE_FILTER: category => dispatch({ type: 'CHANGE_FILTER', category }),
 });
 
 export default connect(null, mapDispatchToProps)(Categoriesform);
