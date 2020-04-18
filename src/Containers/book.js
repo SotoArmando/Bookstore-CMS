@@ -68,7 +68,7 @@ class Book extends Component {
           <span className="fs-0">{title}</span>
           <span>{author}</span>
           <span className="sidemenu">
-            <span role="button" className="classbutton2" tabIndex={0} >Comments</span>
+            <span role="button" className="classbutton2" tabIndex={0}>Comments</span>
             <span role="button" className="classbutton2" tabIndex={0} onClick={() => { handleRemoveBook(deleteindex); }}>Remove</span>
             <span role="button" className="classbutton2" tabIndex={0} onClick={this.handleEditmode}>Edit</span>
           </span>
@@ -76,14 +76,14 @@ class Book extends Component {
 
 
         <div className="row">
-          <div className="row relative" style={{minWidth:"4em"}}>
+        <div className="row relative" >
             <span className="absolute rotate-less90deg">
               <svg height="60" width="60">
                 <circle cx="30" cy="30" r="20" strokeWidth="4px" fill="none" stroke="rgba(0,0,0,.15)" />
               </svg>
             </span>
 
-            <span className=" progress progress--thin" style={{position:"absolute"}}>
+            <span className=" progress progress--thin" style={{ position: 'absolute' }}>
               <svg height="60" width="60">
                 <circle className={`animation-dash-${Math.max(...[0, 25, 50, 75, 100].filter(x => x <= progress))}`} cx="30" cy="30" r="20" strokeWidth="4px" fill="none" />
               </svg>
@@ -92,15 +92,24 @@ class Book extends Component {
           </div>
 
           <div className="row">
-            <span className="fw-600" style={{ marginRight: "1rem", textAlign: 'left',fontWeight:"600" }}>
-              <span style={{ fontSize: "1.375em", color: "rgba(0,0,0,.96)" }}>{progress} %</span>
+            <span className="fw-600" style={{ marginRight: '1rem', textAlign: 'left', fontWeight: '600' }}>
+              <span style={{ fontSize: '1.375em', color: 'rgba(0,0,0,.96)' }}>
+                {progress}
+                {' '}
+                %
+              </span>
 
 
               <br />
-                <span style={{fontWeight:"400"}}>Completed</span>
+              <span style={{ fontWeight: '400' }}>Completed</span>
             </span>
-            <span className="fw-600" style={{ padding: "0em 1em", borderLeft: "1px solid rgba(0,0,0,.15)" }}>
-              <span className="block">Current Chapter<br />Chapter 5<br /></span>
+            <span className="fw-600" style={{ padding: '0em 1em', borderLeft: '1px solid rgba(0,0,0,.15)' }}>
+              <span className="block">
+                Current Chapter
+                <br />
+                Chapter 5
+                <br />
+              </span>
               <span role="button" tabIndex={0} className="classbtn1">Update Chapter</span>
             </span>
           </div>

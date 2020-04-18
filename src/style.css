@@ -421,3 +421,7 @@ span > input {
 .item:last-child {
     color: rgba(0,0,0,.96)
 }
+
+.row.relative {
+    min-width: 4em;
+}
