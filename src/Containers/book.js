@@ -76,7 +76,7 @@ class Book extends Component {
 
 
         <div className="row">
-        <div className="row relative" >
+          <div className="row relative">
             <span className="absolute rotate-less90deg">
               <svg height="60" width="60">
                 <circle cx="30" cy="30" r="20" strokeWidth="4px" fill="none" stroke="rgba(0,0,0,.15)" />
