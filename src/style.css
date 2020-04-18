@@ -341,7 +341,8 @@ span.Categoriespan.active {
     padding: .25em .65em;
     margin: 0 .25em;
     min-height: 1em;
-    background-color: rgba(0, 36, 238, 0.719);
+    background-color: #3790FA;
+    color: white;
     border-radius: 1em;
     line-height: 1.075em;
     transition-duration: 355ms;
@@ -385,7 +386,20 @@ span > input {
     color: rgba(0,0,0,.34);
 }
 
+.classbtn1 {
+    min-width: 6.757968902587891em;
+    min-height: 2.599609375em;
+    color:white;
+    background: #3790FA;
+    padding: .25em 1em;
+    margin-top: 1em;
+    font-weight: 400;
+    border-radius: 4px;
+}
 
+.classbutton2 {
+    color: #3790FA;
+}
 
 .relative {
     position: relative;
@@ -393,4 +407,17 @@ span > input {
 
 .absolute {
     position: absolute;
+}
+
+.block {
+    margin-bottom: 1em;
+    display: -webkit-box;
+
+}
+
+.fs-0 {
+    font-size: 1.375em;
+}
+.item:last-child {
+    color: rgba(0,0,0,.96)
 }
