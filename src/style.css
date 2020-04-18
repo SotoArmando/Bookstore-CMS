@@ -425,3 +425,7 @@ span > input {
 .row.relative {
     min-width: 4em;
 }
+
+.titlespan {
+    color: rgba(0,0,0,.96)
+}

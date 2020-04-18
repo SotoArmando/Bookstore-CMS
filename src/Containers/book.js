@@ -65,7 +65,7 @@ class Book extends Component {
       <div className="notshown Book">
         <div className="col">
           <span className="fw-700">{category}</span>
-          <span className="fs-0">{title}</span>
+          <span className="fs-0 titlespan">{title}</span>
           <span>{author}</span>
           <span className="sidemenu">
             <span role="button" className="classbutton2" tabIndex={0}>Comments</span>
