@@ -20,19 +20,18 @@ class Book extends Component {
   }
 
   handleEditmode(event) {
-
     const {
       editmode, category, title, author, progress,
     } = this.state;
     document.querySelectorAll('.Book').forEach(book => book.classList.toggle('unfocused'));
     const target = event.target.parentNode.parentElement.parentElement.parentElement;
-    
-    if (target.className === "Book unfocused") {
+
+    if (target.className === 'Book unfocused') {
       target.classList.remove('unfocused');
     } else {
       event.target.parentNode.parentElement.parentElement.classList.remove('unfocused');
     }
-    
+
     this.setState({
       editmode: !editmode,
       category,
@@ -74,7 +73,7 @@ class Book extends Component {
         <div className="col">
           <span className="fw-600">{category}</span>
           <span className="fs-0 titlespan">{title}</span>
-          <span>{author}</span>
+          <span className="forecolor2">{author}</span>
           <span className="sidemenu">
             <span role="button" className="classbutton2" tabIndex={0}>Comments</span>
             <span role="button" className="classbutton2 borders0" tabIndex={0} onClick={() => { handleRemoveBook(deleteindex); }}>Remove</span>
@@ -111,13 +110,13 @@ class Book extends Component {
               <span style={{ fontWeight: '400' }}>Completed</span>
             </span>
             <span className="fw-600" style={{ padding: '0em 1em', borderLeft: '1px solid rgba(0,0,0,.15)' }}>
-              <span className="block">
+              <span className="block left0">
                 Current Chapter
                 <br />
-                Chapter 5
+                <span className="forecolor0">Introduction</span>
                 <br />
               </span>
-              <span role="button" tabIndex={0} onClick={this.handleEditmode} className="classbtn1">UPDATE PROGRESS</span>
+              <span role="button" tabIndex={0} onClick={this.handleEditmode} className="classbtn1 left1">UPDATE PROGRESS</span>
             </span>
           </div>
 

@@ -13,7 +13,7 @@ function Categoriesform(props) {
   }
 
   return (
-    <select className="Categoriesform"  onChange={categoryChange}>
+    <select className="Categoriesform" onChange={categoryChange}>
       {categories.map(cat => <option className="Categoriespan" key={Math.random() * 50 + Date.toString()}>{cat}</option>)}
     </select>
   );

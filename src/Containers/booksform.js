@@ -8,9 +8,7 @@ class Booksform extends Component {
     this.state = {
       title: '',
       category: 'Action',
-      author: '',
-      formpart1completed: false,
-      formpart2completed: false,
+      author: 'Anonymous',
     };
     this.handleChange = this.handleChange.bind(this);
     this.renderSubmit = this.renderSubmit.bind(this);
@@ -27,13 +25,13 @@ class Booksform extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     // debugger;
     const {
-      title, category, author, formpart2completed,
+      title, category, author,
     } = this.state;
     const { CREATE_BOOK } = this.props;
-    
+
     CREATE_BOOK({
       title, category, author, progress: 0, filtered: true,
     });
@@ -41,12 +39,8 @@ class Booksform extends Component {
     this.setState({
       title: '',
       category: 'Action',
-      author: '',
-      formpart1completed: false,
-      formpart2completed: false,
+      author: 'Anonymous',
     });
-
-
   }
 
   renderSubmit(event) {
@@ -58,12 +52,12 @@ class Booksform extends Component {
 
   render() {
     const {
-      title, category, author, formpart1completed, formpart2completed,
+      title, category,
     } = this.state;
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
     return (
-      <form name="books" onSubmit={this.handleSubmit.bind(this)} >
+      <form name="books" onSubmit={this.handleSubmit.bind(this)}>
         <div className="row">
           <input type="text" onChange={this.handleChange} name="title" value={title} placeholder="Type any book title" />
           <select name="category" onChange={this.handleChange} value={category} className="t-end" placeholder="Select Category">
@@ -71,7 +65,7 @@ class Booksform extends Component {
           </select>
           <input type="submit" className="classbtn1 width1" value="ADD BOOK" />
         </div>
-      </form >
+      </form>
     );
   }
 }
