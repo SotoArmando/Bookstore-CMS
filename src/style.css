@@ -18,7 +18,7 @@ body {
     font-size: 1em;
     background-color: #EAF2F8;
     color: rgba(0,0,0,.34);
-    font-family: 'Sen', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 input {
@@ -61,6 +61,7 @@ div.App {
     top: 0;
     width: 100%;
     min-height: 1.890625em;
+    z-index: 100;
     background-color: white;
     align-items: center;
     display: flex;
@@ -71,6 +72,7 @@ div.App {
     width: 4.914886474609375em;
     display: inline-block;
     text-align: center;
+    margin-right: 1em;
 }
 
 .Nav > .title {
@@ -79,6 +81,7 @@ div.App {
     width: 9.29220724105835em;
     text-align: center;
     display: inline-block;
+    font-size: 1.375em;
 }
 
 .Menu {
@@ -91,7 +94,7 @@ div.App {
     align-items: center;
 }
 .Menu > * {
-    max-width: 50em;
+    max-width: 60em;
     width: -webkit-fill-available;
 }
 .Book {
@@ -105,6 +108,11 @@ div.App {
     transform: translateY(0em);
     transition-timing-function: cubic-bezier(0.19, 0.90 , 1);
     position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.15);
 }
 
 .Book > .Editor {
@@ -125,6 +133,8 @@ div.App {
     justify-content: center;
     padding: 0 10em;
     box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.15);
 }
 
 .Book > .Editor.on {
@@ -133,6 +143,7 @@ div.App {
     transition-timing-function: cubic-bezier(0.19, 0.90 , 1);
     pointer-events: all;
 }
+
 
 .Book.notshown:not(.unfocused) {
     transform: translateY(.33em);
@@ -144,6 +155,8 @@ div.App {
     height: 0;
     opacity: 0;
     transition-timing-function: cubic-bezier(0.19, 0.90 , 1);
+    pointer-events: none;
+    padding: 0;
 }
 .Book .title, .Book .desc {
     display: flex;
@@ -159,10 +172,10 @@ div.App {
 }
 
 .Book > .col:first-of-type > .sidemenu > * {
-    width: 4.914886474609375em;
+    width: 6.757968902587891em;
     display: inline-block;
     text-align: center;
-
+    padding: 0 .4em;
 }
 
 .Menu > .Booksform {
@@ -173,6 +186,11 @@ div.App {
     min-height: 1.890625em;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+.borders0 {
+    border-left: 1px solid rgba(0,0,0,.34);
+    border-right: 1px solid rgba(0,0,0,.34);
 }
 
 
@@ -221,6 +239,10 @@ div.Book > div:nth-child(2) {
 
 
 /* font-weigth */
+.fw-600 {
+    font-weight: 600;
+}
+
 .fw-400 {
     font-weight: 800;
 }
@@ -230,6 +252,10 @@ div.Book > div:nth-child(2) {
 
 .fw-700 {
     font-weight: 700;
+}
+
+.aselft-center {
+    align-self: center;
 }
 
 .t-center {
@@ -336,7 +362,8 @@ span.Categoriespan.active {
     padding: .25em .65em;
     margin: 0 .25em;
     min-height: 1em;
-    background-color: rgba(0, 36, 238, 0.719);
+    background-color: #3790FA;
+    color: white;
     border-radius: 1em;
     line-height: 1.075em;
     transition-duration: 355ms;
@@ -345,7 +372,7 @@ span.Categoriespan.active {
     margin-bottom: .5em;
 }
 
-div.Categoriesform {
+select.Categoriesform {
     background-color: white;
     min-height: 3em;
     display: flex;
@@ -357,8 +384,12 @@ div.Categoriesform {
 
 form[name='books'] {
     overflow-x: hidden;
-    background-color: white;
-    min-height: 2.599609375em;
+    
+    min-height: 4.914886474609375em;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0,0,0,.34);
+    
 }
 
 div.Editor > span {
@@ -378,8 +409,85 @@ span > input {
     min-width: 6.757968902587891em;
     min-height: 2.599609375em;
     color: rgba(0,0,0,.34);
+    
 }
 
-.fw-600 {
+.classbtn1 {
+    
+    min-height: 2.599609375em;
+    color:white;
+    background: #3790FA;
+    padding: .5em 1em;
+    margin-top: 1em;
+    font-weight: 400;
+    border-radius: 4px;
+    margin: 1em 1em;
+    
+}
+
+.classbutton2 {
+    color: #3790FA;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.block {
+    margin-bottom: 1em;
+    display: -webkit-box;
+
+}
+
+.fs-0 {
+    font-size: 1.375em;
+}
+.item:last-child {
+    color: rgba(0,0,0,.96)
+}
+
+.row.relative {
+    min-width: 4em;
+}
+
+.titlespan {
+    color: rgba(0,0,0,.96);
     font-weight: 600;
+    padding: .25em 0;
+}
+
+.width1 {
+    max-width: 10em;
+}
+
+input[type='text'] {
+    margin-left: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.15);
+    align-self: center;
+    padding: .75em;
+    background-color: white;
+    margin-right: 1em;
+}
+
+.left0 {
+    text-align: left;
+}
+
+.left1 {
+    margin: 0;
+}
+
+.forecolor0 {
+    color: black;
+    font-size: 1.375em;
+    font-weight: 500;
+}
+
+.forecolor2 {
+    color:#3790FA;
 }

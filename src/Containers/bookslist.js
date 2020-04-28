@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Msgtitle from '../Components/msgtitle';
 import Booksform from './booksform';
 import Book from './book';
-import Categoriesform from './categoriesform';
+
 
 function Bookslist(props) {
   const {
@@ -27,9 +26,6 @@ function Bookslist(props) {
 
   return (
     <div className="Menu">
-      <Msgtitle />
-      <Booksform />
-      <Categoriesform />
       {bookstore.map(({
         id, category, title, progress, author,
       }, index) => (
@@ -48,6 +44,8 @@ function Bookslist(props) {
             ) : null}
         </div>
       ))}
+
+      <Booksform />
     </div>
   );
 }

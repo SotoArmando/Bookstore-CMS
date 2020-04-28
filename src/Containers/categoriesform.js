@@ -8,16 +8,14 @@ function Categoriesform(props) {
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 
-  function categoryClick(a) {
-    document.querySelectorAll('span.Categoriespan.active').forEach(e => e.classList.remove('active'));
-    a.currentTarget.classList.add('active');
-    CHANGE_FILTER(a.currentTarget.textContent);
+  function categoryChange(event) {
+    CHANGE_FILTER(event.currentTarget.value);
   }
 
   return (
-    <div className="Categoriesform">
-      {categories.map(cat => <span role="button" tabIndex={0} className="Categoriespan" key={Math.random() * 50 + Date.toString()} onClick={categoryClick}>{cat}</span>)}
-    </div>
+    <select className="Categoriesform" onChange={categoryChange}>
+      {categories.map(cat => <option className="Categoriespan" key={Math.random() * 50 + Date.toString()}>{cat}</option>)}
+    </select>
   );
 }
 
