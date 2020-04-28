@@ -20,11 +20,19 @@ class Book extends Component {
   }
 
   handleEditmode(event) {
+
     const {
       editmode, category, title, author, progress,
     } = this.state;
     document.querySelectorAll('.Book').forEach(book => book.classList.toggle('unfocused'));
-    event.target.parentNode.parentElement.parentElement.classList.remove('unfocused');
+    const target = event.target.parentNode.parentElement.parentElement.parentElement;
+    
+    if (target.className === "Book unfocused") {
+      target.classList.remove('unfocused');
+    } else {
+      event.target.parentNode.parentElement.parentElement.classList.remove('unfocused');
+    }
+    
     this.setState({
       editmode: !editmode,
       category,
@@ -64,12 +72,12 @@ class Book extends Component {
     return (
       <div className="notshown Book">
         <div className="col">
-          <span className="fw-700">{category}</span>
+          <span className="fw-600">{category}</span>
           <span className="fs-0 titlespan">{title}</span>
           <span>{author}</span>
           <span className="sidemenu">
             <span role="button" className="classbutton2" tabIndex={0}>Comments</span>
-            <span role="button" className="classbutton2" tabIndex={0} onClick={() => { handleRemoveBook(deleteindex); }}>Remove</span>
+            <span role="button" className="classbutton2 borders0" tabIndex={0} onClick={() => { handleRemoveBook(deleteindex); }}>Remove</span>
             <span role="button" className="classbutton2" tabIndex={0} onClick={this.handleEditmode}>Edit</span>
           </span>
         </div>
@@ -92,10 +100,9 @@ class Book extends Component {
           </div>
 
           <div className="row">
-            <span className="fw-600" style={{ marginRight: '1rem', textAlign: 'left', fontWeight: '600' }}>
+            <span className="fw-600 aselft-center" style={{ marginRight: '1rem', textAlign: 'left', fontWeight: '600' }}>
               <span style={{ fontSize: '1.375em', color: 'rgba(0,0,0,.96)' }}>
                 {progress}
-                {' '}
                 %
               </span>
 
@@ -110,7 +117,7 @@ class Book extends Component {
                 Chapter 5
                 <br />
               </span>
-              <span role="button" tabIndex={0} className="classbtn1">Update Chapter</span>
+              <span role="button" tabIndex={0} onClick={this.handleEditmode} className="classbtn1">UPDATE PROGRESS</span>
             </span>
           </div>
 

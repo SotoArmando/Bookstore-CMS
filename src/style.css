@@ -18,7 +18,7 @@ body {
     font-size: 1em;
     background-color: #EAF2F8;
     color: rgba(0,0,0,.34);
-    font-family: 'Sen', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 input {
@@ -61,6 +61,7 @@ div.App {
     top: 0;
     width: 100%;
     min-height: 1.890625em;
+    
     background-color: white;
     align-items: center;
     display: flex;
@@ -71,6 +72,7 @@ div.App {
     width: 4.914886474609375em;
     display: inline-block;
     text-align: center;
+    margin-right: 1em;
 }
 
 .Nav > .title {
@@ -79,6 +81,7 @@ div.App {
     width: 9.29220724105835em;
     text-align: center;
     display: inline-block;
+    font-size: 1.375em;
 }
 
 .Menu {
@@ -91,7 +94,7 @@ div.App {
     align-items: center;
 }
 .Menu > * {
-    max-width: 50em;
+    max-width: 60em;
     width: -webkit-fill-available;
 }
 .Book {
@@ -105,6 +108,7 @@ div.App {
     transform: translateY(0em);
     transition-timing-function: cubic-bezier(0.19, 0.90 , 1);
     position: relative;
+    padding-top: 1em;
 }
 
 .Book > .Editor {
@@ -134,6 +138,7 @@ div.App {
     pointer-events: all;
 }
 
+
 .Book.notshown:not(.unfocused) {
     transform: translateY(.33em);
     color: transparent !important;
@@ -144,6 +149,8 @@ div.App {
     height: 0;
     opacity: 0;
     transition-timing-function: cubic-bezier(0.19, 0.90 , 1);
+    pointer-events: none;
+    padding: 0;
 }
 .Book .title, .Book .desc {
     display: flex;
@@ -159,10 +166,10 @@ div.App {
 }
 
 .Book > .col:first-of-type > .sidemenu > * {
-    width: 4.914886474609375em;
+    width: 6.757968902587891em;
     display: inline-block;
     text-align: center;
-
+    padding: 0 .4em;
 }
 
 .Menu > .Booksform {
@@ -173,6 +180,11 @@ div.App {
     min-height: 1.890625em;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+.borders0 {
+    border-left: 1px solid rgba(0,0,0,.34);
+    border-right: 1px solid rgba(0,0,0,.34);
 }
 
 
@@ -223,7 +235,6 @@ div.Book > div:nth-child(2) {
 /* font-weigth */
 .fw-600 {
     font-weight: 600;
-    align-self: center;
 }
 
 .fw-400 {
@@ -235,6 +246,10 @@ div.Book > div:nth-child(2) {
 
 .fw-700 {
     font-weight: 700;
+}
+
+.aselft-center {
+    align-self: center;
 }
 
 .t-center {
@@ -351,7 +366,7 @@ span.Categoriespan.active {
     margin-bottom: .5em;
 }
 
-div.Categoriesform {
+select.Categoriesform {
     background-color: white;
     min-height: 3em;
     display: flex;
@@ -365,6 +380,10 @@ form[name='books'] {
     overflow-x: hidden;
     background-color: white;
     min-height: 2.599609375em;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0,0,0,.34);
+    
 }
 
 div.Editor > span {
@@ -384,17 +403,20 @@ span > input {
     min-width: 6.757968902587891em;
     min-height: 2.599609375em;
     color: rgba(0,0,0,.34);
+    
 }
 
 .classbtn1 {
-    min-width: 6.757968902587891em;
+    
     min-height: 2.599609375em;
     color:white;
     background: #3790FA;
-    padding: .25em 1em;
+    padding: .5em 1em;
     margin-top: 1em;
     font-weight: 400;
     border-radius: 4px;
+    margin: 1em 1em;
+    
 }
 
 .classbutton2 {
@@ -427,5 +449,14 @@ span > input {
 }
 
 .titlespan {
-    color: rgba(0,0,0,.96)
+    color: rgba(0,0,0,.96);
+    font-weight: 600;
+}
+
+.width1 {
+    max-width: 10em;
+}
+
+input[type='text'] {
+    margin-left: 1em;
 }

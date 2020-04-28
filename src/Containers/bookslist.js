@@ -4,12 +4,14 @@ import { connect } from 'react-redux';
 import Msgtitle from '../Components/msgtitle';
 import Booksform from './booksform';
 import Book from './book';
-import Categoriesform from './categoriesform';
+
 
 function Bookslist(props) {
   const {
     bookstore, filtered, REMOVE_BOOK, UPDATE_BOOK,
   } = props;
+
+  console.log(bookstore)
 
   setTimeout(() => {
     document.querySelectorAll('.notshown').forEach(ele => {
@@ -27,27 +29,26 @@ function Bookslist(props) {
 
   return (
     <div className="Menu">
-      <Msgtitle />
-      <Booksform />
-      <Categoriesform />
       {bookstore.map(({
         id, category, title, progress, author,
       }, index) => (
-        <div key={id + id}>
-          {(category === filtered || filtered === 'All')
-            ? (
-              <Book
-                key={id}
-                book={{
-                  id, category, title, progress, author,
-                }}
-                deleteindex={index}
-                handleRemoveBook={handleRemoveBook}
-                updatemethod={handleUpdateBook}
-              />
-            ) : null}
-        </div>
-      ))}
+          <div key={id + id}>
+            {(category === filtered || filtered === 'All')
+              ? (
+                <Book
+                  key={id}
+                  book={{
+                    id, category, title, progress, author,
+                  }}
+                  deleteindex={index}
+                  handleRemoveBook={handleRemoveBook}
+                  updatemethod={handleUpdateBook}
+                />
+              ) : null}
+          </div>
+        ))}
+
+      <Booksform />
     </div>
   );
 }
